@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<timetabling xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="usp_timetabling_v0_1.xsd"
+    name="ua_l3info_20s6_w12d5s8_e0r5t2g4_s44_dw" nrWeeks="12" daysPerWeek="5" slotsPerDay="8">
+    <calendar>
+        <startingDate>2021-01-04</startingDate>
+        <weeks>
+            <week>1</week>
+            <week>2</week>
+            <week>3</week>
+            <week>4</week>
+            <week>5</week>
+            <week>6</week>
+            <week>7</week>
+            <week>8</week><!-- semaine 9 de vacances-->
+            <week>10</week>
+            <week>11</week>
+            <week>12</week>
+            <week>13</week>
+        </weeks>
+        <weekDays>
+            <weekDay>1</weekDay>
+            <weekDay>2</weekDay>
+            <weekDay>3</weekDay>
+            <weekDay>4</weekDay>
+            <weekDay>5</weekDay>
+        </weekDays>
+        <daySlots duration="80">
+            <daySlot>08:00</daySlot>
+            <daySlot>09:30</daySlot>
+            <daySlot>11:00</daySlot>
+            <daySlot>12:30</daySlot>
+            <daySlot>14:00</daySlot>
+            <daySlot>15:30</daySlot>
+            <daySlot>17:00</daySlot>
+            <daySlot>18:30</daySlot>
+        </daySlots>
+    </calendar>
+
+    <!-- pas d'équipements déclarés -->
+ 
+    <!-- une salle, réelle ou virtuelle, ne peut accueillir qu'une séance par créneau -->
+    <!-- les plages de fermeture des salles se formulent par contraintes -->
+    <!-- les profils de salles à capacité variable se formulent par contraintes -->
+    <rooms>
+        <!-- `capacity` : capacité d'accueil maximum d'une salle en nombre d'étudiants -->
+            <!-- `capacity>=-1` -->
+            <!-- `capacity==1` : capacité illimitée -->
+        <!-- `label` (optionnel) : étiquette ou liste d'étiquettes quelconques pour une salle -->
+        <room id="AMPHI-A" capacity="90" label="BATIMENT-A"/>
+        <room id="AMPHI-B" capacity="286" label="BATIMENT-A"/>
+        <room id="H001" capacity="20" label="BATIMENT-H"/>
+        <room id="H002" capacity="42" label="BATIMENT-H"/>
+        <room id="H003" capacity="38" label="BATIMENT-H"/>
+    </rooms>
+
+    <!-- un enseignant ne peut dispenser qu'une séance par créneau -->
+    <!-- les plages d'absences des enseignants se formulent par contraintes -->
+    <teachers>
+        <!-- `label` (optionnel) : étiquette ou liste d'étiquettes quelconques pour un enseignant -->
+        <teacher id="LESAINT David" label="DEPARTEMENT-INFORMATIQUE"/>
+        <teacher id="JAMIN Antoine" label="DEPARTEMENT-INFORMATIQUE"/>
+    </teachers>
+
+    <!-- un groupe ne peut assister qu'à une séance par créneau -->
+    <!-- codification des options : (i = Images de synthèse, p = traitement de données en Python, q = Qt, s = Systèmes intelligents) -->
+    <!-- les plages d'indisponibilité des groupes se formulent par contraintes -->
+    <groups>
+        <!-- `size` : nombre d'étudiants d'un groupe -->
+            <!-- `size>=1` -->
+        <!-- `label` (optionnel) : étiquette ou liste d'étiquettes quelconques pour un groupe -->
+        <group id="1-td1-tp1-pq" size="18" label="L3-INFORMATIQUE,TD1,TP1">
+        </group>
+        <group id="2-td1-tp3-ps" size="22" label="L3-INFORMATIQUE,TD1,TP3">
+        </group>
+        <group id="3-td2-tp2-is" size="10" label="L3-INFORMATIQUE,TD2,TP2">
+        </group>
+        <group id="4-td2-tp2-qs" size="17" label="L3-INFORMATIQUE,TD2,TP2">
+        </group>
+    </groups>
+
+    <courses>
+        <!-- `label` (optionnel) : étiquette ou liste d'étiquettes quelconques pour un cours -->
+        <course id="Développement-Web" label="L3-INFORMATIQUE,UE">
+            <!-- les parties du cours -->
+            <!-- au moins une partie par cours -->
+            <!-- chaque partie comprend un ensemble de classes et prescrit un ensemble de ressources requises et possibles -->
+            <!-- `nrSessions` : nombre de séances à dispenser pour chacune des classes de la partie -->
+                <!-- `nrSessions>=1` -->
+                <!-- chaque séance de classe est implicitement identifiée par un entier dans la plage `1..nrSessions` -->
+            <!-- `length` : durée de chaque séance en nombre de créneaux consécutifs -->
+                <!-- `length>=1` -->
+            <!-- `label` (optionnel) : étiquette ou liste d'étiquettes quelconques pour une partie -->
+            <part id="Développement-Web-CM" nrSessions="12" length="1" label="CM">
+                <!-- les classes de la partie et leurs groupes -->
+                <!-- au moins une classe par partie, au moins un groupe par classe -->
+                <!-- les classes de la partie partitionnent l'ensemble des groupes listés dans la partie -->
+                <!-- les séances d'une classe sont chacune dispensées à tous les groupes de la classe -->
+                <!-- les contraintes de programmation de séances se formulent par contraintes -->
+                <classes>
+                    <class id="Développement-Web-CM1">
+                        <groupId>1-td1-tp1-pq</groupId>
+                        <groupId>2-td1-tp3-ps</groupId>
+                        <groupId>3-td2-tp2-is</groupId>
+                        <groupId>4-td2-tp2-qs</groupId>
+                    </class>
+                </classes>
+
+                <!-- pas d'équipements requis -->
+
+                <!-- le pool de salles possibles ou requises pour toutes les classes -->
+                <!-- `demand` : quantification du nombre de salles requis par classe -->
+                    <!-- `demand \in {none,single,multiple,all,any}` -->
+                    <!-- `demand="none"` :     0 salle -->
+                    <!-- `demand="single"` :   1 salle -->
+                    <!-- `demand="multiple"` : plus d'1 salle -->
+                    <!-- `demand="all"` :      toutes les salles -->
+                    <!-- `demand="any"`  :     0, 1, plus d'1, ou toutes les salles -->
+                <!-- la politique d'allocation de salles aux classes ou aux séances de classes se formule par contraintes -->
+                    <!-- par exemple, placement d'une classe particulière dans une salle particulière -->
+                    <!-- par exemple, placement des séances d'une classe dans la (les) même(s) salle(s) -->
+                <allowedRooms demand="single">
+                    <!-- `min` : nombre minimum de classes que doit héberger la salle -->
+                    <!-- `max` : nombre maximum de classes que doit héberger la salle -->
+                        <!-- `max>=min>=0` -->
+                    <!-- les différentes valeurs `min`, `max` en lien avec `demand` et le nombre de classes déterminent un problème de somme de sous-ensembles -->
+                    <!-- l'instance EDT n'est consistante que si cet instance de problème subset-sum l'est -->
+                    <roomId min="0" max="1">AMPHI-A</roomId>
+                    <roomId min="0" max="1">AMPHI-B</roomId>
+                </allowedRooms>
+
+                <!-- le pool d'enseignants possibles ou requis pour les classes -->
+                <!-- `demand` : quantification du nombre d'enseignants requis par classe (même syntaxe et sémantique que pour les salles) -->
+                <!-- `studentsPerTeacher` : nombre d'étudiants maximum que peut encadrer un enseignant par classe -->
+                    <!-- `studentsPerTeacher>=1` -->
+                <!-- la politique d'attribution des classes ou séances de classes aux enseignants se formule par contraintes -->
+                    <!-- par exemple, attribution d'une classe particulière à un enseignant particulier -->
+                    <!-- par exemple, attribution des séances d'une classe au(x) même(s) enseignant(s) -->
+                <allowedTeachers demand="single" studentsPerTeacher="80">
+                    <!-- `min` : nombre minimum de classes que doit dispenser l'enseignant -->
+                    <!-- `max` : nombre maximum de classes que doit dispenser l'enseignant -->
+                        <!-- `max>=min>=0` -->
+                    <!-- TODO (commnentaire) les différentes valeurs `min`, `max` en lien avec `demand`, `studentsPerTeacher` et le nombre de classes déterminent un problème de somme de sous-ensembles -->
+                    <teacherId min="1" max="1">LESAINT David</teacherId>
+                </allowedTeachers>
+            </part>
+ 
+            <part id="Développement-Web-TP" nrSessions="8" length="2" label="TP">
+                <classes>
+                    <class id="Développement-Web-TP1">
+                        <groupId>1-td1-tp1-pq</groupId>
+                    </class>
+                    <class id="Développement-Web-TP2">
+                        <groupId>3-td2-tp2-is</groupId>
+                        <groupId>4-td2-tp2-qs</groupId>
+                    </class>
+                    <class id="Développement-Web-TP3">
+                        <groupId>2-td1-tp3-ps</groupId>
+                    </class>
+                </classes>                
+                <allowedRooms demand="single">
+                    <roomId min="0" max="3">H001</roomId>
+                    <roomId min="0" max="3">H002</roomId>
+                    <roomId min="0" max="3">H003</roomId>
+                </allowedRooms>
+                <allowedTeachers demand="single" studentsPerTeacher="20">
+                    <teacherId min="2" max="2">LESAINT David</teacherId>
+                    <teacherId min="1" max="1">JAMIN Antoine</teacherId>
+                </allowedTeachers>
+            </part>
+
+            <part id="Développement-Web-PR" nrSessions="8" length="3" label="PR">
+                <classes>
+                    <class id="Développement-Web-PR1">
+                        <groupId>1-td1-tp1-pq</groupId>
+                        <groupId>3-td2-tp2-is</groupId>
+                        <groupId>4-td2-tp2-qs</groupId>
+                        <groupId>2-td1-tp3-ps</groupId>
+                    </class>
+                </classes>
+                <allowedRooms demand="multiple">
+                    <roomId min="0" max="1">H001</roomId>
+                    <roomId min="0" max="1">H002</roomId>
+                    <roomId min="0" max="1">H003</roomId>
+                </allowedRooms>                   
+                <allowedTeachers demand="none" studentsPerTeacher="0">
+                </allowedTeachers>                   
+            </part>
+        </course>
+    </courses>
+    
+    <constraints>
+        <!-- les séances d'une classe du cours Développement-Web sont séquencées dans l'ordre conventionnel -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les séances d'une classe du cours ciblé selon l'ordre conventionnel de leurs indices -->
+            <sessions groupBy="class">
+                <filter type="course" attributeName="id" in="Développement-Web"/>
+            </sessions>
+            <!-- chaque contrainte est dure -->
+            <!-- le prédicat `sequenced` impose le séquencement (sans chevauchement) des séances qui se suivent dans sa portée -->
+            <constraint name="sequenced" type="hard">
+            </constraint> 
+        </constraintCollection>
+
+        <!-- les séances d'une classe de la partie Développement-Web-CM, à l'exclusion des séances 2 et 3, sont hebdomadaires et programmées sur le même créneau -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les séances d'une classe de la partie ciblée selon l'ordre indiqué -->
+            <sessions groupBy="class" sessionsMask="1,4-12"><!-- `sessionsMask` (optionnel) : filtre sur les indices de séances -->
+                <filter type="part" attributeName="id" in="Développement-Web-CM"/>
+            </sessions>
+            <!-- le prédicat `weekly` impose une programmation hebdomadaire sur le même créneau aux séances de sa portée -->
+            <constraint name="weekly" type="hard">
+            </constraint> 
+        </constraintCollection>
+
+        <!-- les séances d'une classe de la partie Développement-Web-TP ou Développement-Web-PR sont hebdomadaires et programmées sur le même créneau -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les séances d'une classe des parties ciblées selon l'ordre conventionnel de leurs indices -->
+            <sessions groupBy="class">
+                <filter type="part" attributeName="id" in="Développement-Web-TP,Développement-Web-PR"/>
+            </sessions>
+            <!-- le prédicat `weekly` impose une programmation hebdomadaire sur le même créneau aux séances de sa portée -->
+             <constraint name="weekly" type="hard">
+            </constraint> 
+        </constraintCollection>
+
+        <!-- les séances 1 des classes de la partie Développement-Web-TP sont dispensées en même semaine -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les séances de la partie ciblée dont les indices satisfont au critère `in` -->
+            <sessions groupBy="part" sessionsMask="1">
+                <filter type="part" attributeName="id" in="Développement-Web-TP"/>
+             </sessions>
+            <!-- le prédicat `sameWeek` impose une programmation en même semaine aux séances de sa portée -->
+            <constraint name="sameWeek" type="hard">
+            </constraint>
+        </constraintCollection>
+ 
+        <!-- les séances 5 des classes de la partie Développement-Web-TP sont dispensées en parallèle (TP noté) -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les séances de la partie ciblée dont les indices satisfont au critère `in` -->
+            <sessions groupBy="part" sessionsMask="5">
+                <filter type="part" attributeName="id" in="Développement-Web-TP"/>
+             </sessions>
+            <!-- le prédicat `sameSlots` impose une programmation sur les mêmes créneaux aux séances de sa portée -->
+            <constraint name="sameSlots" type="hard">
+            </constraint>
+        </constraintCollection>
+
+        <!-- la séance 1 de toute classe de la partie Développement-Web-CM précède la séance 1 de toute classe de la partie Développement-Web-PR -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les paires de séances dont les indices satisfont aux critères `in` pour les paires de parties ciblées -->
+            <sessions groupBy="session" sessionsMask="1">
+                <filter type="part" attributeName="id" in="Développement-Web-CM"/>
+             </sessions>
+            <sessions groupBy="session" sessionsMask="1">
+                <filter type="part" attributeName="id" in="Développement-Web-PR"/>
+             </sessions>
+            <!-- le prédicat `sequenced` impose le séquencement (sans chevauchement) des séances qui se suivent dans sa portée -->
+            <constraint name="sequenced" type="hard">
+            </constraint>
+        </constraintCollection>
+
+        <!-- la séance 3 de toute classe de la partie Développement-Web-CM précède la séance 1 de toute classe de la partie Développement-Web-TP -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les paires de séances dont les indices satisfont aux critères `in` pour les paires de parties ciblées -->
+            <sessions groupBy="session" sessionsMask="3">
+                <filter type="part" attributeName="id" in="Développement-Web-CM"/>
+             </sessions>
+            <sessions groupBy="session" sessionsMask="1">
+                <filter type="part" attributeName="id" in="Développement-Web-TP"/>
+             </sessions>
+            <!-- le prédicat `sequenced` impose le séquencement (sans chevauchement) des séances qui se suivent dans sa portée -->
+            <constraint name="sequenced" type="hard">
+            </constraint>
+        </constraintCollection>
+
+        <!-- les séances d'une classe du cours Développement-Web, à l'exception des classes de la partie Développement-Web-PR, sont dispensées dans les mêmes salles -->
+        <constraintCollection>
+            <!-- chaque portée regroupe les séances d'une classe d'une partie du cours ciblé selon l'ordre conventionnel de leurs indices -->
+            <sessions groupBy="class">
+                <filter type="course" attributeName="id" in="Développement-Web"/>
+                <filter type="part" attributeName="id" notIn="Développement-Web-PR"/>
+             </sessions>
+            <!-- le prédicat `sameRooms` impose le placement dans les mêmes salles des séances de sa portée -->
+            <constraint name="sameRooms" type="hard">
+            </constraint>
+        </constraintCollection>
+
+        <!-- les séances d'une classe du cours Développement-Web sont dispensées par les mêmes enseignants -->
+        <constraintCollection>
+            <sessions groupBy="class">
+                <filter type="course" attributeName="id" in="Développement-Web"/>
+             </sessions>
+            <!-- le prédicat `sameTeachers` impose l'attribution des séances de sa portée aux mêmes enseignants -->
+            <constraint name="sameTeachers" type="hard">
+            </constraint>
+        </constraintCollection>
+    </constraints>
+</timetabling>
