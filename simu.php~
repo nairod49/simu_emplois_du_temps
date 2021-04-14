@@ -1,7 +1,6 @@
 <?php
-require("calendrier.php");
+require("objet/calendrier.php");
 require("groupe.php");
-require ("service.php");
 
 $i=rand(0, 30);
 $a=new groupe("opt_1",$i);
