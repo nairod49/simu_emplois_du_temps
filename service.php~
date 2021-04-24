@@ -103,24 +103,26 @@ class matiere{
  
 
 
-	public function __construct(string $n){
-		$this->id=$n;
-		$this->categories=array();
-	}
-
+public function __construct(string $n){
+$this->id=$n;
+$this->categories=array();
+}
 //fonction qui ajoute des categorie au matiere (CM TP etc)
-	public function ajout_categories(categorie $g){
-		$this->categories[$g->nom]=$g;
-		}
+public function ajout_categories(categorie $g){
+$this->categories[$g->nom]=$g;
+
+}
 
 
-	public function ajout_service(string $c,professeur $P,float $n){
-		foreach ($this->categories as $val){
-			if($val->nom==$c){
-				$val->ajout_service($P,$n);
-			}	
-		}
-	}
+public function ajout_service(string $c,professeur $P,float $n){
+foreach ($this->categories as $val){
+if($val->nom==$c){
+$val->ajout_service($P,$n);
+}
+}
+
+
+}
 
 }
 

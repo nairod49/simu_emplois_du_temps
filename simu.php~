@@ -124,7 +124,7 @@ creation_prof("David Genest");
 
 //print_r($list_matiere["Dev Web"]->categories["CM"] ,$return = null);
 affectation_prof(2.0,"Marc Legay","Dev Web","CM");
-$list_prof["Marc Legay"]->affiche();
+$list_prof["Marc Legay"]->affiche();)
 
 /*
 $dev=new matiere("DevWeb");

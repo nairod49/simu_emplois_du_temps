@@ -59,7 +59,25 @@ public function ajout_groupe(groupe $a){
 
 
 
+//classe matiere qui représente les différente matiere mais là que pour l'affectation des groupe 
 
+Class matiere_groupe{
+public $nom;
+public $categories;
+
+public function __construct(string $n){
+$this->nom=$n;
+$tish->categories=array();
+}
+
+//fonction qui ajoute des categorie au matiere (CM TP etc)
+public function ajout_categories(categories_groupe $g){
+$this->categories[$g->nom]=$g;
+
+}
+
+
+}
 /*
 Class affectation{
 public $nom;
