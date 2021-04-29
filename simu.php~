@@ -170,7 +170,7 @@ $list_formation[$forma->nom]=$forma;
 
 function choix_matiere(etudiant &$e){
 $u=$e->formation->UEs;
-global $list_matiere;
+
 
 
 foreach($u as $val){

@@ -44,7 +44,7 @@ $this->id=$n;
 $this->formation=$f;
 }
 
-public function ajout_matiere(){}
+public function ajout_matiere
 }
 
 

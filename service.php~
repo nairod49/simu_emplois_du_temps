@@ -228,7 +228,7 @@ $this->UE[$m->nom]=$m;
 
 }
 public function ajout_matiere(matiere $m) {
-$this->matiere[$m->id]=$m;
+
 
 }
 
