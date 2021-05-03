@@ -116,7 +116,7 @@ class matiere{
 
 	public function ajout_eleve(etudiant $e){
 	array_push($this->eleves,$e);
-	$this->efectif+=1;
+	$this->effectif+=1;
 		
 	}
 
@@ -171,7 +171,7 @@ array_push($this->semestre,$s);
 Class UE{
 public $nom;
 public $matiere;
-public $otpion;
+public $option;
 
 public function __construct(string $n,$m=array(),bool $o){
 $this->nom=$n;
@@ -191,17 +191,32 @@ array_push($this->matiere, $m);
 
 Class formation {
 public $nom;
-
+public $effectif;
+public $nbgrCM;
+public $nbgrTD;
+public $nbgrTP;
 public $UEs=array();
+public $groupe=array();
+public $eleve=array();
 
 public function __construct(string $n){
 $this->nom=$n;
+$this->effectif=0;
+$this->nbgrCM=0;
+$this->nbgrTD=0;
+$this->nbgrTP=0;
+}
 
-
+public function ajout_groupe(groupe $a){
+$this->groupe[$a->nom]=$a;
 }
 
 public function ajout_ue(UE $u){
 $this->UEs[$u->nom]=$u;
+}
+
+public function ajout_eleve(etudiant $e){
+array_push($this->eleve,$e);
 }
 
 }
@@ -215,12 +230,16 @@ public $id;
 public $formation;
 public $UE;
 public $matiere;
+public $groupe;
 
-public function __construct(string $n,formation $f){
+public function __construct(string $n,formation &$f){
 $this->id=$n;
 $this->formation=$f;
+$f->effectif+=1;
+$f->ajout_eleve($this);
 $this->UE=array();
 $this->matiere=array();
+$this->groupe=array();
 }
 
 public function ajout_UE(UE $m){
@@ -232,6 +251,9 @@ $this->matiere[$m->id]=$m;
 
 }
 
+public function ajout_groupe(groupe $g){
+array_push($this->groupe,$g);
+}
 }
 
 
@@ -242,6 +264,8 @@ Class groupe{
 public $nom;
 //effectif du groupe
 public $effectif;
+//list eleve
+public $list_eleve=array();
 
 //fonction de construction
 public function __construct(string $n,int $e){
@@ -249,7 +273,18 @@ public function __construct(string $n,int $e){
 	$this->effectif=$e;
 }
 
+public function ajout_tabeleve(&$t=array()){
+foreach($t as $val){
+$this->ajout_eleve($val);
 
+}
+
+}
+
+public function ajout_eleve(etudiant &$e){
+array_push($this->list_eleve, $e);
+$e->ajout_groupe($this);
+}
 //fonction d'affichage du groupe
 public function affiche_groupe(){
 	echo "\"", $this->nom ,"\" : ", $this->effectif;

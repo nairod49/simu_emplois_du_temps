@@ -36,7 +36,7 @@ $list_matiere[$n]=$a;
 }
 
 function ajout_categories(string $n,float $h,$t=array(),matiere  &$m){
-$b=rand(15, 30);
+
 
 if($n=="CM"){
 $d=1.25;}
@@ -70,28 +70,55 @@ $list_prof[$n]=$a;
 
 }
 
-function affectation_prof(float $n,string $p,string $m,string $c){
-global $list_matiere , $list_prof;
-$a=$list_prof[$p];
-$list_matiere[$m]->ajout_service($c,$a,$n);
+function creation_prof_alea(int $nb){
+$i=0;
+global $list_prof;
+
+
+$str="abcdefghijklmnopqrstuwxyz";
+
+for($i;$i<$nb;$i++){
+
+$a=new professeur(str_shuffle($str)); 
+
+array_push($list_prof,$a);
+}
 
 
 }
 
-function affectation_prof_rand(string $n){
-global $list_matiere;
+function affectation_prof(float $n,string $p,matiere &$m,string $c){
+global $list_matiere , $list_prof;
+$a=$list_prof[$p];
+$m->ajout_service($c,$a,$n);
+
+
+}
+
+function affectation_prof_rand(matiere &$n){
+
 global $list_prof;
-$a=count($list_prof, $mode = null);
-$m=$list_matiere[$n];
-foreach($m->categories as $val){
+
+
+foreach($n->categories as $val){
 while ($val->reste > 0){
-var_dump($val, $expression = null);
+
 $p=array_rand($list_prof,1);
-var_dump($p, $expression = null);
+
 $d=rand(1,$val->reste);	
 	affectation_prof($d,$p,$n,$val->nom);
 }
+//var_dump($val);
+}
 
+}
+
+function affectation_prof_formation(formation &$F){
+foreach($F->UEs as $ue){
+	foreach($ue->matiere as $m ){
+		affectation_prof_rand($m);
+		var_dump($m->categories);
+	}
 }
 
 }
@@ -113,10 +140,11 @@ global $list_formation;
 $forma=new formation("L3 info");
 
 
+
 creation_classe("Tous");
 
 creation_matiere("anglais");
-ajout_categories("TP",18.0,$list_classe["Tous"],$list_matiere["anglais"]);
+ajout_categories("TP",18.0,$list_classe["Tous"],$list_matiere["anglais"],$forma);
 
 
 creation_matiere("fondement");
@@ -150,19 +178,19 @@ ajout_categories("CM",12.0,$list_classe["Tous"],$list_matiere["graphe"]);
 ajout_categories("TD",4.0,$list_classe["Tous"],$list_matiere["graphe"]);
 ajout_categories("TP",8.0,$list_classe["Tous"],$list_matiere["graphe"]);
 
-$a=new UE("UE 1",$list_matiere["anglais"],false);
+$a=new UE("UE 1",[$list_matiere["anglais"]],false);
 $forma->ajout_ue($a);
-$a=new UE("UE 2",$list_matiere["fondement"],false);
+$a=new UE("UE 2",[$list_matiere["fondement"]],false);
 $forma->ajout_ue($a);
-$a=new UE("UE 3",$list_matiere["THL"],false);
+$a=new UE("UE 3",[$list_matiere["THL"]],false);
 $forma->ajout_UE($a);
-$a=new UE("UE 4",$list_matiere["DECRA"],false);
+$a=new UE("UE 4",[$list_matiere["DECRA"]],false);
 $forma->ajout_UE($a);
-$a=new UE("UE 5",$list_matiere["archi"],false);
+$a=new UE("UE 5",[$list_matiere["archi"]],false);
 $forma->ajout_UE($a);
-$a=new UE("UE 6",$list_matiere["C++"],false);
+$a=new UE("UE 6",[$list_matiere["C++"]],false);
 $forma->ajout_UE($a);
-$a=new UE("UE 7",$list_matiere["graphe"],false);
+$a=new UE("UE 7",[$list_matiere["graphe"]],false);
 $forma->ajout_UE($a);
 
 $list_formation[$forma->nom]=$forma;
@@ -178,6 +206,7 @@ foreach($u as $val){
 	
 	if($val->option==false){
 		foreach($val->matiere as $mat){
+			//var_dump($mat);
 			$e->ajout_matiere($mat);
 			$mat->ajout_eleve($e);
 			
@@ -189,6 +218,75 @@ foreach($u as $val){
 
 }
 
+function creation_groupe(formation &$F,int $td,int $tp){
+global $list_eleve;
+$a=new groupe("CM",150);
+$F->ajout_groupe($a);
+$F->nbgrCM=1;
+$F->groupe["CM"]->ajout_tabeleve($F->eleve);
+$nb=$F->effectif;
+
+$numeleve=0;
+$grtd=0;
+$grtp=0;
+
+
+
+while($nb>0 ) {
+$ntd=$td;
+
+
+
+$nomgroupetd="TD".$grtd;
+
+	$grtd+=1;
+	$nomgroupetd="TD".$grtd;
+$c=new groupe($nomgroupetd,$td);
+
+
+	
+	while($ntd>0 && $nb>0) {
+		$grtp+=1;
+		$nomgroupetp="TP".$grtp;
+		$b=new groupe($nomgroupetp,$tp);
+		
+		for ($i=0;$i<$tp;$i++) {
+			if($ntd>0 && $nb>0){
+			
+		$c->ajout_eleve($F->eleve[$numeleve]);
+		$b->ajout_eleve($F->eleve[$numeleve]);
+		$numeleve+=1;	
+		$ntd-=1;
+		$nb-=1;	}
+		}
+		
+		$F->ajout_groupe($b);
+	  $F->ajout_groupe($c);
+}
+	$F->nbgrTD=$grtd;
+		$F->nbgrTP=$grtp;
+
+}
+
+foreach($F->UEs as $ue){
+	foreach($ue->matiere as $mat){
+	foreach($mat->categories as $cat ){
+		if($cat->nom=="CM"){
+		$cat->nbgroupe=1;	
+		$cat->reste=1;	
+		}	
+			if($cat->nom =="TD") { $cat->nbgroupe=$grtd; $cat->reste=$grtd; }
+			if($cat->nom=="TP"){$cat->nbgroupe=$grtp; $cat->reste=$grtp;}
+		
+		}		
+	}	
+	}
+}
+
+
+
+
+
 function creation_groupe_etudiant(int $nb){
 $i=0;
 global $list_eleve;
@@ -198,7 +296,7 @@ $str="abcdefghijklmnopqrstuwxyz";
 
 for($i;$i<$nb;$i++){
 $b=rand(0,100)/10;
-if($b>0.80) {
+if($b<8.0) {
 $a=new etudiant(str_shuffle($str),$list_formation["L3 info"]); 
 
 }
@@ -215,61 +313,42 @@ array_push($list_eleve,$a);
 
 
 creation_formation("L2 info");
+
+
+
+
 creation_formation_L3S1_info();
 
-creation_groupe_etudiant(10);
+creation_groupe_etudiant(100);
+
+
+creation_groupe($list_formation["L2 info"],30,10);
+
+creation_groupe($list_formation["L3 info"],30,10);
+
+
 foreach($list_eleve as $val){
 choix_matiere($val);
 }
-var_dump($list_matiere["DECRA"], $expression = null);
+
+
 /*
-creation_groupe_rand("opt_1");
-creation_groupe_rand("opt_2i");
-creation_groupe_rand("opt_2d");
-creation_groupe_rand("opt_3");
-
-
-
-creation_classe("Tous");
-creation_classe("G1");
-creation_classe("G2");
-creation_classe("O1");
-creation_classe("O2",$list_classe);
-creation_classe("O3",$list_classe);
-
-ajout_grp_classe("Tous",$list_groupe);
-ajout_grp_classe("G1",[$list_groupe["opt_3"],$list_groupe["opt_1"]]);
-ajout_grp_classe("G2",[$list_groupe["opt_2i"],$list_groupe["opt_2d"]]);
-ajout_grp_classe("O1",[$list_groupe["opt_1"]]);
-ajout_grp_classe("O2",[$list_groupe["opt_2i"],$list_groupe["opt_2d"]]);
-ajout_grp_classe("O3",[$list_groupe["opt_3"]]);
-
-
-creation_matiere("Dev Web",$list_matiere);
-creation_matiere("ISI",$list_matiere);
-
-ajout_categories("CM",[$list_classe["Tous"]],$list_matiere["Dev Web"]);
-ajout_categories("TD",[$list_classe["G1"],$list_classe["G2"]],$list_matiere["Dev Web"]);
-ajout_categories("TP",[$list_classe["O1"],$list_classe["O2"],$list_classe["O3"]],$list_matiere["Dev Web"]);
-
-ajout_categories("CM",[$list_classe["G1"]],$list_matiere["ISI"]);
-ajout_categories("TD",[$list_classe["O1"],$list_classe["O3"]],$list_matiere["ISI"]);
-
-ajout_categories("TP",[$list_classe["O1"],$list_classe["O3"]],$list_matiere["ISI"]);
-
-
 creation_prof("Marc Legay");
 creation_prof("David Lessaint");
 creation_prof("David Genest");
+creation_prof("Ait ei mekki Touria");
+*/
+creation_prof_alea(20);
+affectation_prof_formation($list_formation["L3 info"]);
+//affectation_prof_rand("DECRA");
 
-affectation_prof_rand("Dev Web");
 
 //affectation_prof(2.0,"Marc Legay","Dev Web","CM");
 //affectation_prof(1.0,"Marc Legay","ISI","CM");
-$list_prof["Marc Legay"]->affiche();
-$list_prof["David Genest"]->affiche();
-$list_prof["David Lessaint"]->affiche();
-*/
+//$list_prof["Marc Legay"]->affiche();
+//$list_prof["David Genest"]->affiche();
+//$list_prof["David Lessaint"]->affiche();
+
 
 
 ?>
