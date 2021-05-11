@@ -25,7 +25,7 @@
 		
 <?php
 
-if(isset($_POST["submit"]) ){
+if(isset($_POST) ){
 //creation_formation_L3S1_info();
 echo "test";
 }

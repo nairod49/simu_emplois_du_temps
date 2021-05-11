@@ -1,11 +1,13 @@
 <?php
-//require "groupe.php";
+
 
 //classe professeur qui ressence tout les prof
 class professeur{
 
 //prenom et nom du professeur
 public $id;
+public $nom;
+public $prenom;
 //nombre d'heure a effectué
 public $service;
 //nombre d'heure qui a actuellement 
@@ -15,8 +17,10 @@ public $difference;
 //tableau des affectaction des categories
 public $affectation;
 
-public function __construct(string $i){
-$this->id=$i;
+public function __construct(string $id,string $i,string $c){
+$this->id=$id;
+$this->nom=$i;
+$this->prenom=$c;
 $this->service=192;
 $this->charge=0;
 $this->difference=-192;
@@ -46,8 +50,13 @@ echo $c,": ",$val[0],"<br>";
 }
 }
 
+
+
 class categorie{
-public $nom;
+
+
+public $id;
+public $type;
 public $heure;
 public $coef;
 public $nbgroupe;
@@ -58,14 +67,21 @@ public $reste;
 public $effectif;
 public $groupe;
 
-public function __construct(string $n ,float $h,float $c,float $ng,$G=array()){
-$this->nom=$n;
-$this->heure=$h;
 
-$this->coef=$c;
-$this->nbgroupe=$ng;
-$this->reste=$ng;
-$this->EDT=$h*$c;
+
+public function __construct(string $id,string $n,int $g ,float $h,$G=array()){
+
+$this->id=$id;
+
+$this->type=$n;
+$this->heure=$h;
+$this->effectif=0;
+if($n=="CM") {
+$this->coef=1.25;}
+else {$this->coef=1.0;}
+$this->nbgroupe=$g;
+$this->reste=$g;
+$this->EDT=$h*$this->coef;
 $this->service=array();
 $this->groupe=array();
 foreach($G as $val){
@@ -74,17 +90,19 @@ foreach($G as $val){
 } 
 }
 
-public function ajout_service(professeur $P,float $n){
-$this->service[$P->id]=[$n];
+public function ajout_service(professeur $P,float $n,string $m){
+$this->service[$P->id]=$n;
 $this->reste-=$n;
 $a=$n*$this->EDT;
-$P->ajout_heure($a,$this->nom,$n);
+$nom=$m."-".$this->nom;
+
+$P->ajout_heure($a,$nom ,$n);
 }
 
 
 //fonction qui ajoute un objet groupe a la classe
 public function ajout_groupe(groupe $a){
-	$this->totaleffectif+=$a->effectif;
+	$this->effectif+=$a->effectif;
 	$this->groupe[$a->nom]=$a;
 }
 }
@@ -94,24 +112,27 @@ public function ajout_groupe(groupe $a){
 
 class matiere{
 	public $id;
-	public $descritpion;
+	public $description;
 	public $categories;
 	public $effectif;
+	public $reste_groupe;
 	public $eleves;
 	
  
 
 
-	public function __construct(string $n){
-		$this->id=$n;
+	public function __construct(string $d,string $id){
+		$this->id=$id;
+		$this->description=$d;
 		$this->categories=array();
 		$this->eleves=array();
 		$this->effectif=0;
+		$this->reste_groupe=0;
 	}
 
 //fonction qui ajoute des categorie au matiere (CM TP etc)
 	public function ajout_categories(categorie $g){
-		$this->categories[$g->nom]=$g;
+		$this->categories[$g->type]=$g;
 		}
 
 	public function ajout_eleve(etudiant $e){
@@ -123,7 +144,7 @@ class matiere{
 	public function ajout_service(string $c,professeur $P,float $n){
 		foreach ($this->categories as $val){
 			if($val->nom==$c){
-				$val->ajout_service($P,$n);
+				$val->ajout_service($P,$n,$this->id);
 			}	
 		}
 	}
@@ -133,49 +154,18 @@ class matiere{
 
 
 
-/*
-class semestre{
-public $nom;
-public $matieres;
 
-public function __construct(string $i,$t =array()){
-$this->nom=$i;
-$this->matieres=$t;
-}
-
-public function ajout_matiere(matiere $m){
-	array_push($this->matieres, $m);
-}
-
-}
-*/
-
-/*
-class filiare{
-public $nom;
-public $descritpion;
-public $semestre;
-
-public function __construct(string $i,string $d){
-$this->nom=$i;
-$this->description=$d;
-$this->semestre=array();
-
-}
-public function ajout_semestre(semestre $s){
-array_push($this->semestre,$s);
-}
-}
-*/
 
 Class UE{
 public $nom;
 public $matiere;
-public $option;
 
-public function __construct(string $n,$m=array(),bool $o){
+public $nomformation;
+public $nb_bloc;
+
+public function __construct(string $n,$m=array(),int $nb){
 $this->nom=$n;
-$this->option=$o;
+$this->nb_bloc=$nb;
 $this->matiere=array();
 foreach($m as $val){
 array_push($this->matiere, $val);
