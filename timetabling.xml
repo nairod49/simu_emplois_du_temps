@@ -1,364 +1,372 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <teachers>
- <teacher id="2784" name="xlrtijuabhnzmpcwykdfgsoeq"/>
- <teacher id="2785" name="klznihbxwcogsmeyjfpqutrda"/>
- <teacher id="2786" name="nmwexuckadlshzbfoygrtpjqi"/>
- <teacher id="2787" name="cryixmjwsazogtkbphudeqlnf"/>
- <teacher id="2788" name="otplrwnszmeyxfuhcbkqjiagd"/>
- <teacher id="2789" name="jbznrtcxphkmfedoawulgsqiy"/>
- <teacher id="2790" name="pdcxmotgwzeafnliqhkbuysjr"/>
- <teacher id="2791" name="hymbkgfwntziujlsecdoarxqp"/>
- <teacher id="2792" name="wusxrbmoadiyftlqznkepjghc"/>
- <teacher id="2793" name="maugejfzycwsnqxpodbhtilrk"/>
- <teacher id="2794" name="pmhrksogztbwdfxjcaqynielu"/>
- <teacher id="2795" name="cpehbfyugktdswlriaqmxzjno"/>
- <teacher id="2796" name="mkihxclayjwnopbgsqredtufz"/>
- <teacher id="2797" name="uihktsnxqabzpdfljwgyercom"/>
- <teacher id="2798" name="zumextjfsgaqbirkpodnwlych"/>
- <teacher id="2799" name="jmdhtifzrosnekxgacuylpqbw"/>
- <teacher id="2800" name="kfzribwtaexmscjlpqygudhon"/>
- <teacher id="2801" name="ogxhzcjunqsrmpftkbawilyed"/>
- <teacher id="2802" name="xbmfytlgpkzqrshdjcoeiwaun"/>
- <teacher id="2803" name="cpyubjdegrzowhixsnfqatmlk"/>
- <teacher id="2804" name="yzsxjflcbdekpwogmtqnairuh"/>
- <teacher id="2805" name="lxwmqpucoksfrgihbyjanzetd"/>
- <teacher id="2806" name="kapnlgbjwuzsfxiomdehqytcr"/>
- <teacher id="2807" name="htuwomizafrgsbcpdxyjklqen"/>
- <teacher id="2808" name="enpjfzhousrxmlbdwtqagciyk"/>
- <teacher id="2809" name="ahczpfweknriymqtsblgodxuj"/>
- <teacher id="2810" name="ljnmdxzpguqtwosaifrhkeybc"/>
- <teacher id="2811" name="sktfqocbgyxnilrujmahzwedp"/>
- <teacher id="2812" name="bilxdykthfercznwpajusgomq"/>
- <teacher id="2813" name="rxihqonwuyjcmsbtplfeadgkz"/>
+ <teacher id="4171" name="pyncmaugjiwtxrlofhkbzqdse"/>
+ <teacher id="4172" name="rqmdfwcnlsjbihpxaoekgytzu"/>
+ <teacher id="4173" name="njiglhzmyxqsoepudtckrbfwa"/>
+ <teacher id="4174" name="pibqfhaksuotlmejncdyxwzgr"/>
+ <teacher id="4175" name="bdgzaklneytiojphcfwxrmqus"/>
+ <teacher id="4176" name="xlfoinskchtzrbagjqpywmude"/>
+ <teacher id="4177" name="jnkgaemufxzichrltpdqosbwy"/>
+ <teacher id="4178" name="dcphfilnrxztmjsqkeaugobyw"/>
+ <teacher id="4179" name="ndbpajtgwmozislxhufrcqeky"/>
+ <teacher id="4180" name="zgxfibawnrysukomjldhcteqp"/>
+ <teacher id="4181" name="lhpinmrsxqokuywafgzjcdbet"/>
+ <teacher id="4182" name="orfdwcqmzbjuptkesygihnlxa"/>
+ <teacher id="4183" name="zpaeukrwfxnhqglbiocstmdyj"/>
+ <teacher id="4184" name="ohefktnjswxcplgiyrmadqzbu"/>
+ <teacher id="4185" name="gtmnjuiqyobrwzflaxedshcpk"/>
+ <teacher id="4186" name="mrskajtpdgwfxqizehbuoncyl"/>
+ <teacher id="4187" name="wjmfbzdytcguklnpireaqhsxo"/>
+ <teacher id="4188" name="nqsyaecwrgihtmdjubfozlkpx"/>
+ <teacher id="4189" name="jmqgxcswytfiudpakobrhlzen"/>
+ <teacher id="4190" name="fezdwayslrmupkijxgqthnobc"/>
+ <teacher id="4191" name="wdxkebqtcgznpsihylrjuofam"/>
+ <teacher id="4192" name="wbifuejckzmqprgnlhatxydso"/>
+ <teacher id="4193" name="tihwfgjpsmlozkcqedbrxnuay"/>
+ <teacher id="4194" name="drqapbljutocemxswykignhzf"/>
+ <teacher id="4195" name="oxqcjlksperhydbwafnztmgiu"/>
+ <teacher id="4196" name="xbwljkdarspihequzoyftgmnc"/>
+ <teacher id="4197" name="iexyoajwfrsgnluhpztkdqmcb"/>
+ <teacher id="4198" name="utjeiswpaqknchglbzxfoydmr"/>
+ <teacher id="4199" name="owlzhkfxjrsydbpigumaetqcn"/>
+ <teacher id="4200" name="rlpamztwebxgcshqnjifduoky"/>
 </teachers>
 <Groupes>
- <Groupe id="1799" size="20" label="L1_MPCIE ,TD1 ,TP1"/>
- <Groupe id="1800" size="20" label="L1_MPCIE ,TD1 ,TP2"/>
- <Groupe id="1801" size="20" label="L1_MPCIE ,TD2 ,TP3"/>
+ <Groupe id="1994" size="20" label="L3 Info ,TD1 ,TP1"/>
+ <Groupe id="1995" size="20" label="L3 Info ,TD1 ,TP2"/>
+ <Groupe id="1996" size="20" label="L3 Info ,TD2 ,TP3"/>
 </Groupes>
 <formations>
- <formation id="461" label="L1_MPCIE">
+ <formation id="530" label="L3 Info">
   <courses>
-   <course id="3700" nom="sjcblkygathufwmrizpnqoxed">
-    <part id="9960" nbsesion="24" lenght="test" label="CM">
+   <course id="4275" nom="kmutzrigoljcpfqdbnawyxshe">
+    <part id="14996" nbsesion="21" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2793" nbgroupe="1" nom="maugejfzycwsnqxpodbhtilrk"/>
+      <teacher id="4194" nbgroupe="1" nom="drqapbljutocemxswykignhzf"/>
      </allowedTeacher>
     </part>
-    <part id="9961" nbsesion="17" lenght="test" label="TD">
+    <part id="14997" nbsesion="15" lenght="test" label="TD">
      <classes>
-      <classe id="TD-sjcblkygathufwmrizpnqoxed-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-kmutzrigoljcpfqdbnawyxshe-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-sjcblkygathufwmrizpnqoxed-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-kmutzrigoljcpfqdbnawyxshe-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2812" nbgroupe="2" nom="bilxdykthfercznwpajusgomq"/>
+      <teacher id="4194" nbgroupe="2" nom="drqapbljutocemxswykignhzf"/>
+     </allowedTeacher>
+    </part>
+    <part id="14998" nbsesion="28" lenght="test" label="TP">
+     <classes>
+      <classe id="TP-kmutzrigoljcpfqdbnawyxshe-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+      </classe>
+      <classe id="TP-kmutzrigoljcpfqdbnawyxshe-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
+      </classe>
+      <classe id="TP-kmutzrigoljcpfqdbnawyxshe-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
+      </classe>
+     </classes>
+     <allowedTeacher demand="multiple">
+      <teacher id="4190" nbgroupe="1" nom="fezdwayslrmupkijxgqthnobc"/>
+      <teacher id="4190" nbgroupe="1" nom="fezdwayslrmupkijxgqthnobc"/>
+      <teacher id="4190" nbgroupe="1" nom="fezdwayslrmupkijxgqthnobc"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
   <courses>
-   <course id="3701" nom="nurtazbmqgpfowdelicyhxskj">
-    <part id="9962" nbsesion="21" lenght="test" label="CM">
+   <course id="4276" nom="gdnlousfjyehqkrxpctbamizw">
+    <part id="14999" nbsesion="20" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2793" nbgroupe="1" nom="maugejfzycwsnqxpodbhtilrk"/>
+      <teacher id="4197" nbgroupe="1" nom="iexyoajwfrsgnluhpztkdqmcb"/>
      </allowedTeacher>
     </part>
-    <part id="9963" nbsesion="26" lenght="test" label="TD">
+    <part id="15000" nbsesion="30" lenght="test" label="TD">
      <classes>
-      <classe id="TD-nurtazbmqgpfowdelicyhxskj-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-gdnlousfjyehqkrxpctbamizw-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-nurtazbmqgpfowdelicyhxskj-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-gdnlousfjyehqkrxpctbamizw-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2809" nbgroupe="1" nom="ahczpfweknriymqtsblgodxuj"/>
-      <teacher id="2791" nbgroupe="1" nom="hymbkgfwntziujlsecdoarxqp"/>
+      <teacher id="4197" nbgroupe="1" nom="iexyoajwfrsgnluhpztkdqmcb"/>
+      <teacher id="4183" nbgroupe="1" nom="zpaeukrwfxnhqglbiocstmdyj"/>
+     </allowedTeacher>
+    </part>
+    <part id="15001" nbsesion="10" lenght="test" label="TP">
+     <classes>
+      <classe id="TP-gdnlousfjyehqkrxpctbamizw-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+      </classe>
+      <classe id="TP-gdnlousfjyehqkrxpctbamizw-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
+      </classe>
+      <classe id="TP-gdnlousfjyehqkrxpctbamizw-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
+      </classe>
+     </classes>
+     <allowedTeacher demand="multiple">
+      <teacher id="4180" nbgroupe="3" nom="zgxfibawnrysukomjldhcteqp"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
   <courses>
-   <course id="3702" nom="oqywznkxhligmptcjfurdsaeb">
-    <part id="9964" nbsesion="20" lenght="test" label="CM">
+   <course id="4277" nom="cixhjzknulqsmatorbpfdegyw">
+    <part id="15002" nbsesion="22" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2796" nbgroupe="1" nom="mkihxclayjwnopbgsqredtufz"/>
+      <teacher id="4185" nbgroupe="1" nom="gtmnjuiqyobrwzflaxedshcpk"/>
      </allowedTeacher>
     </part>
-    <part id="9965" nbsesion="18" lenght="test" label="TD">
+    <part id="15003" nbsesion="10" lenght="test" label="TD">
      <classes>
-      <classe id="TD-oqywznkxhligmptcjfurdsaeb-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-cixhjzknulqsmatorbpfdegyw-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-oqywznkxhligmptcjfurdsaeb-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-cixhjzknulqsmatorbpfdegyw-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2791" nbgroupe="1" nom="hymbkgfwntziujlsecdoarxqp"/>
-      <teacher id="2789" nbgroupe="1" nom="jbznrtcxphkmfedoawulgsqiy"/>
+      <teacher id="4185" nbgroupe="2" nom="gtmnjuiqyobrwzflaxedshcpk"/>
+     </allowedTeacher>
+    </part>
+    <part id="15004" nbsesion="15" lenght="test" label="TP">
+     <classes>
+      <classe id="TP-cixhjzknulqsmatorbpfdegyw-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+      </classe>
+      <classe id="TP-cixhjzknulqsmatorbpfdegyw-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
+      </classe>
+      <classe id="TP-cixhjzknulqsmatorbpfdegyw-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
+      </classe>
+     </classes>
+     <allowedTeacher demand="multiple">
+      <teacher id="4185" nbgroupe="2" nom="gtmnjuiqyobrwzflaxedshcpk"/>
+      <teacher id="4183" nbgroupe="1" nom="zpaeukrwfxnhqglbiocstmdyj"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
   <courses>
-   <course id="3703" nom="ferqypdlxgsubznctjmkaiowh">
-    <part id="9966" nbsesion="24" lenght="test" label="CM">
+   <course id="4278" nom="ixdczjsuytrgqkfnbaolmhewp">
+    <part id="15005" nbsesion="25" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2793" nbgroupe="1" nom="maugejfzycwsnqxpodbhtilrk"/>
+      <teacher id="4191" nbgroupe="1" nom="wdxkebqtcgznpsihylrjuofam"/>
      </allowedTeacher>
     </part>
-    <part id="9967" nbsesion="23" lenght="test" label="TD">
+    <part id="15006" nbsesion="18" lenght="test" label="TD">
      <classes>
-      <classe id="TD-ferqypdlxgsubznctjmkaiowh-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-ixdczjsuytrgqkfnbaolmhewp-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-ferqypdlxgsubznctjmkaiowh-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-ixdczjsuytrgqkfnbaolmhewp-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2793" nbgroupe="2" nom="maugejfzycwsnqxpodbhtilrk"/>
+      <teacher id="4190" nbgroupe="2" nom="fezdwayslrmupkijxgqthnobc"/>
      </allowedTeacher>
     </part>
-    <part id="9968" nbsesion="18" lenght="test" label="TP">
+    <part id="15007" nbsesion="17" lenght="test" label="TP">
      <classes>
-      <classe id="TP-ferqypdlxgsubznctjmkaiowh-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
+      <classe id="TP-ixdczjsuytrgqkfnbaolmhewp-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
       </classe>
-      <classe id="TP-ferqypdlxgsubznctjmkaiowh-2">
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TP-ixdczjsuytrgqkfnbaolmhewp-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TP-ferqypdlxgsubznctjmkaiowh-3">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TP-ixdczjsuytrgqkfnbaolmhewp-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2786" nbgroupe="3" nom="nmwexuckadlshzbfoygrtpjqi"/>
+      <teacher id="4191" nbgroupe="2" nom="wdxkebqtcgznpsihylrjuofam"/>
+      <teacher id="4180" nbgroupe="1" nom="zgxfibawnrysukomjldhcteqp"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
   <courses>
-   <course id="3704" nom="wrlumiaeypzosftkxhqdcbgjn">
-    <part id="9969" nbsesion="23" lenght="test" label="CM">
+   <course id="4279" nom="xnhmgfojrspydlbiekqtzuwac">
+    <part id="15008" nbsesion="18" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2796" nbgroupe="1" nom="mkihxclayjwnopbgsqredtufz"/>
+      <teacher id="4183" nbgroupe="1" nom="zpaeukrwfxnhqglbiocstmdyj"/>
      </allowedTeacher>
     </part>
-    <part id="9970" nbsesion="11" lenght="test" label="TD">
+    <part id="15009" nbsesion="20" lenght="test" label="TD">
      <classes>
-      <classe id="TD-wrlumiaeypzosftkxhqdcbgjn-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-xnhmgfojrspydlbiekqtzuwac-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-wrlumiaeypzosftkxhqdcbgjn-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-xnhmgfojrspydlbiekqtzuwac-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2796" nbgroupe="2" nom="mkihxclayjwnopbgsqredtufz"/>
+      <teacher id="4183" nbgroupe="2" nom="zpaeukrwfxnhqglbiocstmdyj"/>
      </allowedTeacher>
     </part>
-    <part id="9971" nbsesion="10" lenght="test" label="TP">
+    <part id="15010" nbsesion="13" lenght="test" label="TP">
      <classes>
-      <classe id="TP-wrlumiaeypzosftkxhqdcbgjn-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
+      <classe id="TP-xnhmgfojrspydlbiekqtzuwac-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
       </classe>
-      <classe id="TP-wrlumiaeypzosftkxhqdcbgjn-2">
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TP-xnhmgfojrspydlbiekqtzuwac-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TP-wrlumiaeypzosftkxhqdcbgjn-3">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TP-xnhmgfojrspydlbiekqtzuwac-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2796" nbgroupe="2" nom="mkihxclayjwnopbgsqredtufz"/>
-      <teacher id="2785" nbgroupe="1" nom="klznihbxwcogsmeyjfpqutrda"/>
+      <teacher id="4183" nbgroupe="2" nom="zpaeukrwfxnhqglbiocstmdyj"/>
+      <teacher id="4190" nbgroupe="1" nom="fezdwayslrmupkijxgqthnobc"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
   <courses>
-   <course id="3705" nom="frpxisdtzubkjmqgocwaehlny">
-    <part id="9972" nbsesion="18" lenght="test" label="CM">
+   <course id="4280" nom="jyrcnamotblfdzsqpwhxuikge">
+    <part id="15011" nbsesion="25" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2786" nbgroupe="1" nom="nmwexuckadlshzbfoygrtpjqi"/>
+      <teacher id="4194" nbgroupe="1" nom="drqapbljutocemxswykignhzf"/>
      </allowedTeacher>
     </part>
-    <part id="9973" nbsesion="22" lenght="test" label="TD">
+    <part id="15012" nbsesion="26" lenght="test" label="TD">
      <classes>
-      <classe id="TD-frpxisdtzubkjmqgocwaehlny-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-jyrcnamotblfdzsqpwhxuikge-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-frpxisdtzubkjmqgocwaehlny-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-jyrcnamotblfdzsqpwhxuikge-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2809" nbgroupe="2" nom="ahczpfweknriymqtsblgodxuj"/>
+      <teacher id="4194" nbgroupe="2" nom="drqapbljutocemxswykignhzf"/>
      </allowedTeacher>
     </part>
-    <part id="9974" nbsesion="30" lenght="test" label="TP">
+    <part id="15013" nbsesion="23" lenght="test" label="TP">
      <classes>
-      <classe id="TP-frpxisdtzubkjmqgocwaehlny-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
+      <classe id="TP-jyrcnamotblfdzsqpwhxuikge-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
       </classe>
-      <classe id="TP-frpxisdtzubkjmqgocwaehlny-2">
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TP-jyrcnamotblfdzsqpwhxuikge-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TP-frpxisdtzubkjmqgocwaehlny-3">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TP-jyrcnamotblfdzsqpwhxuikge-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2786" nbgroupe="2" nom="nmwexuckadlshzbfoygrtpjqi"/>
-      <teacher id="2785" nbgroupe="1" nom="klznihbxwcogsmeyjfpqutrda"/>
+      <teacher id="4197" nbgroupe="3" nom="iexyoajwfrsgnluhpztkdqmcb"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
   <courses>
-   <course id="3708" nom="borplnmsdwqajzfchtixygeuk">
-    <part id="9981" nbsesion="22" lenght="test" label="CM">
+   <course id="4281" nom="yfnxrgcozbuhsiemldtqpkwaj">
+    <part id="15014" nbsesion="18" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2812" nbgroupe="1" nom="bilxdykthfercznwpajusgomq"/>
+      <teacher id="4195" nbgroupe="1" nom="oxqcjlksperhydbwafnztmgiu"/>
      </allowedTeacher>
     </part>
-    <part id="9982" nbsesion="29" lenght="test" label="TD">
+    <part id="15015" nbsesion="17" lenght="test" label="TD">
      <classes>
-      <classe id="TD-borplnmsdwqajzfchtixygeuk-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-yfnxrgcozbuhsiemldtqpkwaj-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-borplnmsdwqajzfchtixygeuk-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-yfnxrgcozbuhsiemldtqpkwaj-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2785" nbgroupe="1" nom="klznihbxwcogsmeyjfpqutrda"/>
-      <teacher id="2785" nbgroupe="1" nom="klznihbxwcogsmeyjfpqutrda"/>
+      <teacher id="4195" nbgroupe="1" nom="oxqcjlksperhydbwafnztmgiu"/>
+      <teacher id="4180" nbgroupe="1" nom="zgxfibawnrysukomjldhcteqp"/>
      </allowedTeacher>
     </part>
-    <part id="9983" nbsesion="24" lenght="test" label="TP">
+    <part id="15016" nbsesion="30" lenght="test" label="TP">
      <classes>
-      <classe id="TP-borplnmsdwqajzfchtixygeuk-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
+      <classe id="TP-yfnxrgcozbuhsiemldtqpkwaj-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
       </classe>
-      <classe id="TP-borplnmsdwqajzfchtixygeuk-2">
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TP-yfnxrgcozbuhsiemldtqpkwaj-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TP-borplnmsdwqajzfchtixygeuk-3">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TP-yfnxrgcozbuhsiemldtqpkwaj-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2785" nbgroupe="1" nom="klznihbxwcogsmeyjfpqutrda"/>
-      <teacher id="2791" nbgroupe="2" nom="hymbkgfwntziujlsecdoarxqp"/>
+      <teacher id="4195" nbgroupe="3" nom="oxqcjlksperhydbwafnztmgiu"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
   <courses>
-   <course id="3706" nom="ptfqkozslnruxcjihygwdbmea">
-    <part id="9975" nbsesion="25" lenght="test" label="CM">
+   <course id="4282" nom="sbrpocmgeihkxwqjluyantdzf">
+    <part id="15017" nbsesion="23" lenght="test" label="CM">
      <classes/>
      <allowedTeacher demand="multiple">
-      <teacher id="2812" nbgroupe="1" nom="bilxdykthfercznwpajusgomq"/>
+      <teacher id="4185" nbgroupe="1" nom="gtmnjuiqyobrwzflaxedshcpk"/>
      </allowedTeacher>
     </part>
-    <part id="9976" nbsesion="13" lenght="test" label="TD">
+    <part id="15018" nbsesion="12" lenght="test" label="TD">
      <classes>
-      <classe id="TD-ptfqkozslnruxcjihygwdbmea-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TD-sbrpocmgeihkxwqjluyantdzf-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TD-ptfqkozslnruxcjihygwdbmea-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TD-sbrpocmgeihkxwqjluyantdzf-2">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2812" nbgroupe="2" nom="bilxdykthfercznwpajusgomq"/>
+      <teacher id="4191" nbgroupe="1" nom="wdxkebqtcgznpsihylrjuofam"/>
+      <teacher id="4191" nbgroupe="1" nom="wdxkebqtcgznpsihylrjuofam"/>
      </allowedTeacher>
     </part>
-    <part id="9977" nbsesion="12" lenght="test" label="TP">
+    <part id="15019" nbsesion="23" lenght="test" label="TP">
      <classes>
-      <classe id="TP-ptfqkozslnruxcjihygwdbmea-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
+      <classe id="TP-sbrpocmgeihkxwqjluyantdzf-1">
+       <groupeID id="1994">L3 Info ,TD1 ,TP1</groupeID>
       </classe>
-      <classe id="TP-ptfqkozslnruxcjihygwdbmea-2">
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
+      <classe id="TP-sbrpocmgeihkxwqjluyantdzf-2">
+       <groupeID id="1995">L3 Info ,TD1 ,TP2</groupeID>
       </classe>
-      <classe id="TP-ptfqkozslnruxcjihygwdbmea-3">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
+      <classe id="TP-sbrpocmgeihkxwqjluyantdzf-3">
+       <groupeID id="1996">L3 Info ,TD2 ,TP3</groupeID>
       </classe>
      </classes>
      <allowedTeacher demand="multiple">
-      <teacher id="2791" nbgroupe="1" nom="hymbkgfwntziujlsecdoarxqp"/>
-      <teacher id="2791" nbgroupe="2" nom="hymbkgfwntziujlsecdoarxqp"/>
-     </allowedTeacher>
-    </part>
-   </course>
-  </courses>
-  <courses>
-   <course id="3707" nom="tsokbhgzqrpdxwaufnjyliecm">
-    <part id="9978" nbsesion="19" lenght="test" label="CM">
-     <classes/>
-     <allowedTeacher demand="multiple">
-      <teacher id="2809" nbgroupe="1" nom="ahczpfweknriymqtsblgodxuj"/>
-     </allowedTeacher>
-    </part>
-    <part id="9979" nbsesion="11" lenght="test" label="TD">
-     <classes>
-      <classe id="TD-tsokbhgzqrpdxwaufnjyliecm-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
-      </classe>
-      <classe id="TD-tsokbhgzqrpdxwaufnjyliecm-2">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
-      </classe>
-     </classes>
-     <allowedTeacher demand="multiple">
-      <teacher id="2809" nbgroupe="1" nom="ahczpfweknriymqtsblgodxuj"/>
-      <teacher id="2785" nbgroupe="1" nom="klznihbxwcogsmeyjfpqutrda"/>
-     </allowedTeacher>
-    </part>
-    <part id="9980" nbsesion="17" lenght="test" label="TP">
-     <classes>
-      <classe id="TP-tsokbhgzqrpdxwaufnjyliecm-1">
-       <groupeID id="1799">L1_MPCIE ,TD1 ,TP1</groupeID>
-      </classe>
-      <classe id="TP-tsokbhgzqrpdxwaufnjyliecm-2">
-       <groupeID id="1800">L1_MPCIE ,TD1 ,TP2</groupeID>
-      </classe>
-      <classe id="TP-tsokbhgzqrpdxwaufnjyliecm-3">
-       <groupeID id="1801">L1_MPCIE ,TD2 ,TP3</groupeID>
-      </classe>
-     </classes>
-     <allowedTeacher demand="multiple">
-      <teacher id="2809" nbgroupe="2" nom="ahczpfweknriymqtsblgodxuj"/>
-      <teacher id="2796" nbgroupe="1" nom="mkihxclayjwnopbgsqredtufz"/>
+      <teacher id="4185" nbgroupe="1" nom="gtmnjuiqyobrwzflaxedshcpk"/>
+      <teacher id="4191" nbgroupe="2" nom="wdxkebqtcgznpsihylrjuofam"/>
      </allowedTeacher>
     </part>
    </course>
   </courses>
  </formation>
 </formations>
-<?php $foo=2;echo $foo;?>
+<?php?>

@@ -205,6 +205,8 @@ public $eleve=array();
 public $classe=array();
 //parcours des différentes option si elle existe
 public $parcours=array();
+//nombre d'etudiant par parcours
+public $nbparcours=array();
 
 //fonction de construction de la formation , paramètre: nom de la formation 
 	public function __construct(string $n){

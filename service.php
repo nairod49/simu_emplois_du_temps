@@ -1,5 +1,9 @@
 <?php
 
+// projet de la facultés des sciences d'Angers 
+// fait par Dorian Letort
+
+
 
 //classe professeur qui ressence tout les profs
 class professeur{
